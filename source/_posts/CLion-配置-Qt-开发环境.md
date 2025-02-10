@@ -1,7 +1,7 @@
 ---
 title: CLion 配置 Qt 开发环境
 date: 2025-02-10 17:08:14
-tags:
+tags: [Clion, C++, Qt]
 ---
 
 ## 	添加外部工具

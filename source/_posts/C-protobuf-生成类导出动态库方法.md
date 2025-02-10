@@ -1,7 +1,7 @@
 ---
 title: C++ protobuf 生成类导出动态库方法
 date: 2025-02-10 17:04:20
-tags:
+tags: [CMake, C++, Protobuf]
 ---
 
 *protobuf 版本 3.6.1*
