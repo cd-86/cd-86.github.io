@@ -33,6 +33,15 @@ CMake选项: `-DCMAKE_PREFIX_PATH=C:\Qt\6.7.2\msvc2019_64`
 运行->编辑配置
 
 工作目录：`C:\Qt\6.7.2\msvc2019_64\bin`
-环境变量：`QT_ASSUME_STDERR_HAS_CONSOLE=1 `
+环境变量：`QT_WIN_DEBUG_CONSOLE=attach `
 
 ![img3](image-3.png)
+
+## 在 WIN 上 qDebug 正确输出配置
+`shift`+`ctrl`+`alt`+`/` 打开注册表修改 `run.processes.with.pty`为`false`
+
+![img4](image-4.png)
+
+打开`设置` -> `编辑器` -> `文件编码` 将全局编码改为 `GBK` 并将项目加入路径
+
+![img5](image-5.png)
