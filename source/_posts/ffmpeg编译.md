@@ -15,6 +15,7 @@ tags: [MinGW, C, msys2]
 4. 下载 ffmpeg库
 5. 配置 编译
    ``` shell
+   # 仅 MP3 Wav
    ./configure \
    --prefix=../ffmpeg \
    --disable-programs \
@@ -38,6 +39,30 @@ tags: [MinGW, C, msys2]
    --enable-shared \
    --disable-static \
    --extra-ldflags="-static -lpthread -liconv"
+
+   # 常用音频 wav,mp3,aac,flac,ogg,opus
+
+   ./configure \
+  --prefix=../ffmpeg_audio_common \
+  --disable-programs \
+  --disable-doc \
+  --disable-avdevice \
+  --disable-swscale \
+  --disable-postproc \
+  --disable-avfilter \
+  --disable-everything \
+  --enable-swresample \
+  --enable-protocol=file \
+  \
+  --enable-demuxer=wav,mp3,aac,flac,ogg,opus \
+  \
+  --enable-parser=mpegaudio,aac,vorbis,opus,flac,gsm \
+  \
+  --enable-decoder=mp3,aac,flac,opus,vorbis,gsm_ms,pcm_s16le,pcm_s24le,pcm_f32le \
+  \
+  --disable-shared \
+  --enable-static \
+  --extra-ldflags="-static -lpthread -liconv"
 
    make -j$(nproc) && make install
    ```
